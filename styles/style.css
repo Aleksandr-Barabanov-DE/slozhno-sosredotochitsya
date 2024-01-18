@@ -2,4 +2,387 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  color: var(--text-color, #f1b2ce);
+  font-family: var(--page-font-family, "IBM Plex mono", monospace);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px;
+  background-color: var(--page-background-color, #000028);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Секция HEADER, начинаем с мобильной верстки  */
+
+/* выполняем условия 100vh, grid и padding от мобильной версии до desktop */
+
+.header__container {
+  display: grid;
+  min-block-size: 100vh;
+  padding: clamp(0.625rem, 0.4049rem + 0.939vw, 1.25rem);
+  align-items: start;
+  background-image: var(
+    --page-background-image,
+    url("../images/cover-image.png")
+  );
+}
+
+/* Задаем относительное позиционирование для будущих псевдоэлементов */
+
+.decorated-zone {
+  position: relative;
+}
+
+/* Задаем уголки декоративные */
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid var(--bracket-color, #ff0070);
+  border-right: 1px solid var(--bracket-color, #ff0070);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--bracket-color, #ff0070);
+  border-left: 1px solid var(--bracket-color, #ff0070);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  inset-block-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+}
+
+/* стилизуем REC */
+
+/* создаем контейнер и задаем правила расположения будущих элементов */
+
+.decorative-rec-icon {
+  position: absolute;
+  z-index: -1;
+  visibility: var(--rec-decor-visibility, visible);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  /* смещаем в конец */
+  inset-inline-end: 20px;
+  inset-block-start: 10px;
+}
+
+/* созлаем два псевдоэлемента элемента для темной темы */
+
+.decorative-rec-icon:before {
+  content: "REC";
+  color: var(--accent-color, #ff0070);
+  line-height: 25px;
+}
+
+.decorative-rec-icon:after {
+  content: " ";
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px var(--accent-color, #ff0070);
+  background: var(--accent-color, #ff0070);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+/* переставляем меню на другую сторону */
+
+.header__theme-menu {
+  justify-self: end;
+  margin-block: 65px;
+}
+
+/* организуем расположение кнопок */
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11.5px;
+}
+
+/* стилизуем кнопки */
+
+/* Общий стиль кнопок */
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  display: inline-flex;
+  height: 26px;
+  padding: 0px 13px;
+  line-height: 18px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  text-transform: lowercase;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-button-text);
+}
+
+/* Стилизуем активную кнопку */
+
+.header__theme-menu-button_active {
+  /* у нее повторяется цвет текста */
+  border-color: currentColor;
+  /* убираем наведение */
+  cursor: default;
+  pointer-events: none;
+}
+
+/* стиль кнопок при наведении */
+
+.header__theme-menu-button:hover {
+  border-color: var(--color-button-hover, #ff007040);
+}
+
+.header__theme-menu-button:focus {
+  outline: 0;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: currentColor;
+}
+
+/* Стилизуем заголовок страницы */
+
+.header__title {
+  font-family: var(--page-font-family);
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--shadow-color, #ff0070);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%; /* 129.525px */
+}
+
+/* Текст под заголовком страницы  */
+
+.header__text {
+  color: var(--highlight-color, #000028);
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+  margin-block: 56px;
+  background: var(--shadow-color, #ff0070);
+}
+
+/* MAIN */
+
+.main {
+  display: grid;
+
+  /* Отступ между секциями */
+
+  gap: 50px;
+  padding: 40px 10px;
+}
+
+/* SECTION */
+
+/* задаем отступ основных блоков от заголовка */
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.section-how-title {
+  margin-block-end: 20px;
+}
+
+/* Стилизуем карточку  */
+
+.article {
+  display: grid;
+  gap: 10px;
+}
+
+/* Отступ между карточками */
+
+.articles-list {
+  display: grid;
+  gap: 20px;
+}
+
+.section-title {
+  color: var(--section-title-color, #ff0070);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* текст на выделенном фоне */
+
+.article-title {
+  color: var(--highlight-color, #000028);
+  font-weight: 700;
+  font-family: inherit;
+}
+
+/* выделение под названием абзацев */
+
+.title-decor {
+  background-color: var(--accent-color, #ff0070);
+}
+
+.no-bald-text {
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Стилизуем основной текст */
+
+.main-text {
+  color: var(--text-color, #f1b2ce);
+}
+
+/* СЕКЦИЯ Галлерея  */
+
+.gallery-list {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery-list__item {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+/* FOOTER */
+
+.footer {
+  display: grid;
+  min-block-size: 100vh;
+  padding: clamp(0.625rem, 0.4049rem + 0.939vw, 1.25rem);
+  place-items: center;
+}
+
+/* Стилизуеем ссылки */
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: 0;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+/* Стилизация ссылок в тексте тень */
+
+.link-decor {
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+}
+
+/* ИЗМЕНЕНИЯ ПОД МЕДИА ЗАПРОСЫ */
+
+@media (width >= 768px) {
+  /* смещаем декоративный элемент */
+
+  .decorative-rec-icon {
+    inset-inline-end: 28px;
+    inset-block-start: 20px;
+  }
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  /* делаем смещение надписи no focus игнорируя padding */
+
+  .header {
+    padding-inline-start: 0;
+  }
+
+  /* смещаем блок с текстом вправо и задаем размеры */
+
+  .header__text {
+    justify-self: end;
+    inline-size: clamp(364px, calc(100% / 2 - 10px), 491px);
+  }
+
+  .header__theme-menu {
+    margin-block-start: 170px;
+    margin-block-end: 70px;
+  }
+
+  .main {
+    gap: 80px;
+    padding: 60px 20px;
+  }
+
+  .section {
+    grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
+  }
+
+  .section-what-articles-list {
+    grid-column-start: span 2;
+  }
+
+  /* Стилизуем секцию галлерея общие настройки */
+
+  .section-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  /* Стилизуем секцию галлерея расположение картинок */
+
+  .gallery-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* растягиваем изображения */
+
+  .gallery-list__item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-list__item:first-child,
+  .gallery-list__item:last-child {
+    grid-column-start: span 2;
+  }
+
+  .gallery-list__item:nth-child(2),
+  .gallery-list__item:nth-child(3) {
+    grid-row-start: span 2;
+  }
+}
+@media (width >= 1024px) {
+  .section {
+    column-gap: 30px;
+  }
+
+  .section-what-articles-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    margin-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 215px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
 }
