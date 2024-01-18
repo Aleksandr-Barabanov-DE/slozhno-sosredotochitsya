@@ -1,4 +1,4 @@
-https://github.com/Aleksandr-Barabanov-DE/posmotri_v_okno.git
+https://github.com/Aleksandr-Barabanov-DE/slozhno-sosredotochitsya.git
 
 # Яндекс Практикум, практическая работа "Сложно сосредоточиться"
 
