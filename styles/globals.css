@@ -40,3 +40,27 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+/* Задаем плавное перемещение  */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Скрываем scrollbar для Chrome, Safari и Opera */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Скрываем scrollbar для IE, Edge и Firefox */
+
+body {
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+}
