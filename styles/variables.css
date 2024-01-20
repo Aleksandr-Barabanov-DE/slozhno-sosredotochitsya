@@ -4,83 +4,47 @@
 */
 /* Делаем общие переменныйе переменные */
 :root {
-  /* цвет фона светлой темы */
-  --color-light-back: #fff1f7;
-
-  /* цвет тескта светлой темы  */
-  --color-light-text: #353430;
-
-  /* цвет выделения названий абзацев светлой темы */
-  --color-light-accent: #ff8dcb;
-
-  /* цвет no focus на малых экранах светлой темы */
-  --color-light-nofocus: #ffc2e6;
-
-  /* цвет основоного текста темной темы */
-  --color-dark-text: #f1b2ce;
-
-  /* цвет no focus темной темы */
-  --color-dark-nofocus: #db00ff;
-
-  /* цвет тени названия и выделения названия абзацев темной темы */
-  --color-dark-accent: #ff0070;
-
-  /* цвет текста выделенных абзацев и фона темной темы  */
-  --color-dark-back: #000028;
-
-  /* цвет кнопок при наведении темная тема */
-  --сolor-button-hover-dark: #ff007040;
-
-  /* цвет кнопок при наведении светлая тема */
-  --сolor-button-hover-light: #35343040;
-
-  /* цвет декоративных уголков темной темы */
-  --color-bracket-dark: #ff0070;
-
-  /* цвет декоративных уголков темной темы */
-  --color-bracket-light: #353430;
-
   /* ОСНОВНЫЕ ПЕРЕМЕННЫЕ */
 
   /* тескт основной на странице в абзацах  */
-  --text-color: var(--color-dark-text, #f1b2ce);
+  --text-color: #f1b2ce;
 
   /* текст no focus */
-  --main-title-color: var(--color-dark-nofocus, #db00ff);
+  --main-title-color: #db00ff;
 
   /* тень текста no focus */
-  --shadow-color: var(--color-dark-accent, #ff0070);
+  --shadow-color: #ff0070;
 
   /* выделение под названием абзацев */
-  --accent-color: var(--color-dark-accent, #ff0070);
+  --accent-color: #ff0070;
 
   /* текст на выделенном фоне */
-  --highlight-color: var(--color-dark-back, #000028);
+  --highlight-color: #000028;
 
   /* основной текст страницы */
   --page-font-family: "IBM Plex mono", monospace;
 
   /* основной фон hero section */
-  --page-background-image: url("../images/cover-image.png");
+  --page-background-image: url("../images/cover-image-dark.png");
 
   /* основной фон всей страницы */
-  --page-background-color: var(--color-dark-back, #000028);
+  --page-background-color: #000028;
 
   /* декоративный элемент REC */
   --rec-decor-visibility: visible;
 
   /* цвет тескта кнопок темной темы  */
-  --color-button-text: var(--color-dark-accent, #ff0070);
+  --color-button-text: #ff0070;
 
   /* цвет кнопок при наведении */
-  --color-button-hover: var(--сolor-button-hover-dark, #ff007040);
+  --color-button-hover: #ff007040;
 
   /* цвет декоративных уголков */
-  --bracket-color: var(--color-bracket-dark, #ff0070);
+  --bracket-color: #ff0070;
 
   /* тень текста no focus */
-  --shadow-color: var(--color-dark-accent, #ff0070);
+  --shadow-color: #ff0070;
 
   /* Цвет названия секций */
-  --section-title-color: var(--color-dark-accent, #ff0070);
+  --section-title-color: #ff0070;
 }
