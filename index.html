@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Сложно сосредоточиться</title>
 
     <!-- Добавим немного SEO -->
@@ -27,31 +28,21 @@
     <!-- Для SVG-файла -->
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
 
-    <!-- Сообщаем браузеру, что у нашего сайта есть тёмная и светлая темы -->
-    <meta name="color-scheme" content="dark light" />
-
     <!-- Подключаем стили в правильной послеовательности -->
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="stylesheet" href="./styles/dark.css" />
 
-    <!-- через media feature задаем браузеру выбор темы под пожелания пользователя -->
-    <link
-      rel="stylesheet"
-      href="./styles/dark.css"
-      media="(prefers-color-scheme: dark)"
-    />
-    <link
-      rel="stylesheet"
-      href="./styles/light.css"
-      media="(prefers-color-scheme: light)"
-    />
+    <!-- Сообщаем браузеру, что у нашего сайта есть тёмная и светлая темы -->
+    <meta name="color-scheme" content="dark light" />
 
     <!-- Задаем индексацию всей страницы, можно заменить на all -->
     <meta name="robots" content="index, follow" />
   </head>
 
-  <body class="page theme_light theme_dark">
+  <body class="page">
     <header class="header header__container decorated-zone">
       <!-- добавляем декоративную надпись и скрываем ее от ридеров при помощи area-hidden -->
       <div class="decorative-rec-icon" aria-hidden="true"></div>
@@ -201,9 +192,9 @@
           <ul class="articles-list section-how-articles-list">
             <li>
               <article class="article">
-                <h3 class="article-title title-decor no-bald-text">
+                <h4 class="article-title title-decor no-bald-text">
                   Представьте небо и облака
-                </h3>
+                </h4>
                 <p class="main-text">
                   Или листья в ручье. Тут дело в лёгкой медитации, которая
                   помогает успокоиться. Ведь часто именно тревожные мысли о
@@ -219,9 +210,9 @@
             </li>
             <li>
               <article class="article">
-                <h3 class="article-title title-decor no-bald-text">
+                <h4 class="article-title title-decor no-bald-text">
                   Включите музыку
-                </h3>
+                </h4>
                 <p class="main-text">
                   Но не любую, и не любимую. Любимая может быть связана с
                   сильными положительными эмоциями, которые тоже очень сильно
@@ -233,9 +224,9 @@
             </li>
             <li>
               <article class="article">
-                <h3 class="article-title title-decor no-bald-text">
+                <h4 class="article-title title-decor no-bald-text">
                   Прогуляйтесь
-                </h3>
+                </h4>
                 <p class="main-text">
                   Или даже пробегитесь. Лучше найти парк или лес: один
                   эксперимент
@@ -255,9 +246,9 @@
             </li>
             <li>
               <article class="article">
-                <h3 class="article-title title-decor no-bald-text">
+                <h4 class="article-title title-decor no-bald-text">
                   Хорошо ешьте
-                </h3>
+                </h4>
                 <p class="main-text">
                   Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
                   которые препятствуют резким скачкам сахара в крови. Например,
@@ -269,7 +260,7 @@
             </li>
             <li>
               <article class="article">
-                <h3 class="article-title title-decor no-bald-text">Читайте</h3>
+                <h4 class="article-title title-decor no-bald-text">Читайте</h4>
                 <p class="main-text">
                   Настоящие бумажные книги. Это правда помогает с концентрацией:
                   чтобы прочитать пост в соцсети, достаточно нескольких минут
@@ -285,7 +276,7 @@
       <!-- СЕКЦИЯ Галлерея -->
 
       <section class="section section-gallery">
-        <h2 class="section-title title-decor">А можно в картинках?</h2>
+        <h2 class="gallery-section-title title-decor">А можно в картинках?</h2>
         <ul class="gallery-list">
           <li class="gallery-list__item">
             <picture>
@@ -346,6 +337,7 @@
     <footer class="footer decorated-zone">
       <h2 class="header__title accented-shadow-text">focus</h2>
     </footer>
+
     <script src="./scripts/script.js"></script>
   </body>
 </html>
