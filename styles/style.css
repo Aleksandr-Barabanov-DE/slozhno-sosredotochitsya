@@ -9,6 +9,10 @@
   font-weight: 400;
   line-height: 23.4px;
   background-color: var(--page-background-color, #000028);
+  background-image: var(
+    --page-background-image,
+    url("../images/cover-image.png")
+  );
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -23,10 +27,6 @@
   min-block-size: 100vh;
   padding: clamp(0.625rem, 0.4049rem + 0.939vw, 1.25rem);
   align-items: start;
-  background-image: var(
-    --page-background-image,
-    url("../images/cover-image.png")
-  );
 }
 
 /* Задаем относительное позиционирование для будущих псевдоэлементов */
@@ -213,6 +213,14 @@
 
 .section-title {
   color: var(--section-title-color, #ff0070);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.gallery-section-title {
+  color: var(--highlight-color, #000028);
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
 }
