@@ -44,8 +44,8 @@
   border-right: 1px solid var(--bracket-color, #ff0070);
   inline-size: 25px;
   block-size: 25px;
-  inset-inline-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
-  inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
 }
 
 .decorated-zone::after {
@@ -55,8 +55,8 @@
   border-left: 1px solid var(--bracket-color, #ff0070);
   inline-size: 25px;
   block-size: 25px;
-  inset-inline-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
-  inset-block-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
 }
 
 /* стилизуем REC */
@@ -85,7 +85,7 @@
 
 .decorative-rec-icon:after {
   content: " ";
-  display: inline-block;
+  display: flex;
   border-radius: 50%;
   box-shadow: 0 0 2px 2px var(--accent-color, #ff0070);
   background: var(--accent-color, #ff0070);
@@ -250,6 +250,13 @@
   color: var(--text-color, #f1b2ce);
 }
 
+.text_style {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 130%;
+}
+
 /* СЕКЦИЯ Галлерея  */
 
 .gallery-list {
@@ -308,6 +315,15 @@
     inset-block-start: 20px;
   }
 
+  .decorated-zone::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
